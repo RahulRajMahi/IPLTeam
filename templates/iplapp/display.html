@@ -1,0 +1,52 @@
+{% extends 'iplapp/base.html' %}
+{% block content %}
+<h1 align="center">IPL 2021 TEAM DETAILS</h1>
+<br>
+{% if team_list %}
+<table class="text-white" border="1px" align="center" cellspacing="10px" cellpadding="10px">
+  <thead class="text-center">
+    <th>Team Name</th>
+    <th>Team Owner</th>
+    <th>Team Home City</th>
+    <th>Operation</th>
+  </thead>
+  {% for t in team_list %}
+  <tr>
+    <td>{{t.name}}</td>
+    <td>{{t.owner}}</td>
+    <td>{{t.home_city}}</td>
+    <td> <a class="text-white" href="/update/{{t.id}}">Update</a> / 
+      <a class="text-white" data-toggle="modal" data-target="#exampleModal" href="/delete/{{t.id}}">Delete</a></td>
+  </tr>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5>Are you sure to delete ??</h5>
+      </div>
+      <div class="modal-footer">
+        <a class="text-white btn btn-primary" data-dismiss="modal">Cancel</a>
+        <a class="text-white btn btn-danger" href="/delete/{{t.id}}">Delete</a>
+       
+
+      </div>
+    </div>
+  </div>
+</div>
+  {%endfor%}
+</table>
+{% else %}
+<h4 class="text-white text-center">No Team Record Found!!!</h4>
+{% endif %}
+<br>
+<p class="lead" align="center">
+  <br>
+  <a class="btn btn-primary btn-lg" href="/" role="button">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a class="btn btn-primary btn-lg" href="/add" role="button">Add a team</a>
+</p>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends 'iplapp/base.html' %}
+{% block content %}
+<h1 class=" alert alert-denger text-center">ADD A NEW IPL TEAM FOR 2021 </h1>
+<div class="row">
+  <div class='col-5 col-sm-5 col-lg-6 col-xl-5 box text-white pl-0'>
+  <form method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <br>
+    <div class="row pl-3">
+    <input type="submit" class = "btn btn-success btn-lg" role = "button" value="Register">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="btn btn-primary btn-lg" href="/" role="button">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a class="btn btn-primary btn-lg" href="/display" role="button">Display team details</a>
+  </div>
+  </form>
+</div>
+</div>  
+
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends 'iplapp/base.html' %}
+{% block content %}
+<h1 class="text-center alert alert-denger">UPDATE TEAM RECORD</h1>
+<div class="row">
+  <div class='col-sm-6 text-white box pl-0'>
+    <form method="post">
+      {{form.as_p}}
+      {% csrf_token %}  
+      <br>
+      <div class="row pl-3">
+      <input type="submit" class = "btn btn-success btn-lg" role = "button" value="Update">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="btn btn-primary btn-lg" href="/" role="button">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="btn btn-primary btn-lg" href="/add" role="button">Add a team</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="btn btn-primary btn-lg" href="/display" role="button">Display team details</a>
+    </p>
+    </div>
+    </form>
+  </div>
+  </div>  
+  <p class="lead" align="center">
+   
+{% endblock content %}
+
+
+

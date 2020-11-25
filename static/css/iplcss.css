@@ -1,0 +1,30 @@
+body{
+  background-image: url("https://www.cricket.com.au/~/-/media/News/2015/06/30adelaide.ashx?w=1600");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 37em;
+}
+
+/* .container .jumbotron{
+  background: transparent;
+  color: white;
+} */
+
+h1{
+  color: white;
+  align-items: center;
+}
+.font{
+
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+
+}
+a:visited {
+  color: rgb(255, 190, 217)
+}
+.box{
+  margin-left: 180px;
+}
+/* background-image: url(https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=867&q=80); */
